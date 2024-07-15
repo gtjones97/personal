@@ -362,16 +362,7 @@ $(function () {
 	}
 });
 
-( function( $ ) {
-	'use strict';
-
-	// load html
-	$.get("https://bslthemes.com/html/glitche/bar/bar.html", function (data) {
-        $('body').append(data);
- 		console.log(data);
-    });
-
-} )( jQuery );
+( jQuery );
 
 ( function( $ ) {
 	'use strict';
