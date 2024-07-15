@@ -628,6 +628,7 @@ blockquote {
 		animation: glitch-2 2s infinite linear alternate-reverse;
 	}
 
+
 }
 
 @keyframes glitch-1 {
@@ -794,5 +795,11 @@ blockquote {
 		top: 0px;
 	}
 
+}
+
+.desc_heading {
+	color: #141414;
+	font-weight: 700;
+	font-size: 24px;
 }
 

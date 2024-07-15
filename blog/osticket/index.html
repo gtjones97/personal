@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Basic -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>osTicket - Gabriel Jones</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<!-- Load Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/alani-basic.css" />
+	<link rel="stylesheet" href="/css/alani-layout.css" />
+	<link rel="stylesheet" href="/css/ionicons.css" />
+	<link rel="stylesheet" href="/css/magnific-popup.css" />
+	<link rel="stylesheet" href="/css/animate.css" />
+	<link rel="stylesheet" href="/css/template-colors/orange.css" />
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="/images/favicons/favicon.ico">
+
+</head>
+
+<body>	
+	
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="centrize full-width">
+			<div class="vertical-center">
+				<div class="pre-inner">
+					<div class="load typing-load"><p>loading...</p></div>
+					<span class="typed-load"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Container -->
+	<div class="container">
+		
+		<!-- Header -->
+		<header>
+			<div class="head-top">
+				<a href="index.html#" class="menu-btn"><span></span></a>
+				<div class="top-menu">
+					<ul>
+						<li><a href="/" class="lnk">Home</a></li>
+						<li class="active"><a href="/blog/" class="lnk">Blog</a></li>
+						<li><a href="/contact/" class="btn">Contact Me</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+		<!-- Wrapper -->
+		<div class="wrapper">
+		
+			<!-- Started -->
+			<div class="section started">
+				<div class="centrize full-width">
+					<div class="vertical-center">
+						<div class="started-content">
+							<div class="date">January 24 2022</div>
+							<div class="h-title blog_title">Building a Ticketing System for MGRL</div>
+						</div>
+					</div>
+				</div>
+				<a href="blog_inner.html#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
+			</div>
+			
+			<!-- Blog -->
+			<div class="section blog">
+				<div class="content">
+					<div class="single-post-text">
+						<p>
+							Ever since I joined the MGRL in 2019, I wanted to improve our ticketing system. Google Forms lacked essential features like direct responses, agent correspondence, notifications, and ticket status tracking. Our department wasted time discussing ticket details before solving them.<br><br>
+
+I found many cloud options, but they weren't free. My boss offered an unused server, so I chose osTicket, a robust open-source platform that is highly customizable and had all the essential features I was looking for. I installed it on an Ubuntu Server.
+						</p><br>
+						<p><img src="/images/blog/osticket_preview.png" alt="" /></p>
+                        <table style="margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th style="width: 150px; text-align: center;"><b>Program Name</b></th>
+                                    <th><b>Purpose</b></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center;">osTicket</td>
+                                    <td>Manages all web pages and functions for the ticketing system.</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">Ubuntu Linux 20.04 </td>
+                                    <td>The operating system for the server.</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">Apache2</td>
+                                    <td>Makes the server accessible online via ports 80 (HTTP) and 443 (HTTPS).</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">MySQL Server</td>
+                                    <td>Stores all data like tickets, users, and configurations in a database.</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">PHP 7.2</td>
+                                    <td>Enables the server to run scripts and communicate with the database.</td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;">Certbot</td>
+                                    <td>Automates the renewal of SSL certificates for HTTPS.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+						<p>
+							I began by installing Ubuntu Server and configuring Apache2, which took some time due to my inexperience with Apache. Once configured, I accessed the webserver locally via "localhost." To ensure external access, I requested our ISP open ports 80 (HTTP) and 443 (HTTPS) on our router. While waiting, I installed and configured MySQL Server and PHP. osTicket then guided me through the rest of the setup, installing dependencies and tying everything together.<br><br>
+
+I customized the server, added help topics, departments, and email configurations. I provided the public IP to The University System of Georgia to set up an A record for a new subdomain, ensuring internet accessibility. After setting up the server, I trained my supervisor on management, maintenance, and backups. To secure the publicly accessible server, I followed an Apache hardening guide, installed Fail2ban, and enforced HTTPS. Finally, I migrated staff to the new system using a CSV import from Google Admin, allowing staff to log in with their work emails and set their passwords, which are securely hashed.<br>
+						</p>
+						<p>
+                            The new ticketing system has received many compliments from staff for its ease of use and overall improvement compared to Google Forms. It provides centralized communication and numerous quality-of-life enhancements. The system has been running smoothly for over three months without any issues, making this project a great success!
+						</p><br>
+                        <p><img src="/images/blog/osticket_sample_ticket.png" alt="" /></p>
+                        <p><img src="/images/blog/osticket_ubuntu.png" alt="" /></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<!-- Footer -->
+		<footer>
+			<div class="copy">© 2024 Gabriel Jones</div>
+			<div class="clr"></div>
+		</footer>
+		
+		<!-- Lines -->
+		<div class="line top"></div>
+		<div class="line bottom"></div>
+		<div class="line left"></div>
+		<div class="line right"></div>
+		
+	</div>
+	
+	<!-- jQuery Scripts -->
+    <script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.validate.js"></script>
+	<script src="/js/typed.js"></script>
+	<script src="/js/magnific-popup.js"></script>
+	<script src="/js/imagesloaded.pkgd.js"></script>
+	<script src="/js/isotope.pkgd.js"></script>
+	
+	<!-- Main Scripts -->
+	<script src="/js/alani-scripts.js"></script>
+
+	
+</body>
+</html>
