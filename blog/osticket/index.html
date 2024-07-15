@@ -77,7 +77,7 @@
 				<div class="content">
 					<div class="single-post-text">
 						<p>
-							Ever since I joined the MGRL in 2019, I wanted to improve our ticketing system. Google Forms lacked essential features like direct responses, agent correspondence, notifications, and ticket status tracking. Our department wasted time discussing ticket details before solving them.<br><br>
+							Ever since I joined the MGRL in 2019, I've wanted to improve our ticketing system. Google Forms lacked essential features like direct responses, agent correspondence, notifications, file uploads, and ticket status tracking. Our department wasted time discussing ticket details before solving them.<br><br>
 
 I found many cloud options, but they weren't free. My boss offered an unused server, so I chose osTicket, a robust open-source platform that is highly customizable and had all the essential features I was looking for. I installed it on an Ubuntu Server.
 						</p><br>
@@ -117,7 +117,7 @@ I found many cloud options, but they weren't free. My boss offered an unused ser
                             </tbody>
                         </table>
 						<p>
-							I began by installing Ubuntu Server and configuring Apache2, which took some time due to my inexperience with Apache. Once configured, I accessed the webserver locally via "localhost." To ensure external access, I requested our ISP open ports 80 (HTTP) and 443 (HTTPS) on our router. While waiting, I installed and configured MySQL Server and PHP. osTicket then guided me through the rest of the setup, installing dependencies and tying everything together.<br><br>
+							I began by installing Ubuntu Server and configuring Apache2. Once configured, I was able to access the webserver locally via "localhost." To gain external access, I needed our ISP to open ports 80 (HTTP) and 443 (HTTPS) on our router. While waiting, I installed and configured MySQL Server and PHP. osTicket then guided me through the rest of the setup, installing dependencies and tying everything together.<br><br>
 
 I customized the server, added help topics, departments, and email configurations. I provided the public IP to The University System of Georgia to set up an A record for a new subdomain, ensuring internet accessibility. After setting up the server, I trained my supervisor on management, maintenance, and backups. To secure the publicly accessible server, I followed an Apache hardening guide, installed Fail2ban, and enforced HTTPS. Finally, I migrated staff to the new system using a CSV import from Google Admin, allowing staff to log in with their work emails and set their passwords, which are securely hashed.<br>
 						</p>

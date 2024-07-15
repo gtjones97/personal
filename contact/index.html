@@ -112,7 +112,7 @@
 						</div>
 					</div>
 					<div class="contact_form">
-						<form id="cform" method="post">
+					<form id="cform" name="contact" method="POST" netlify data-netlify="true">
 							<div class="group-val">
 								<input type="text" name="name" placeholder="Name" />
 							</div>
@@ -122,8 +122,10 @@
 							<div class="group-val ct-gr">
 								<textarea name="message" placeholder="Message"></textarea>
 							</div>
-							<a href="/contact/" class="btn fill" onclick="$('#cform').submit(); return false;">Send Message</a>
+							<a href="/contact/success.html" class="btn fill" onclick="document.getElementById('cform').submit()">Send Message</a>
 						</form>
+
+
 						<div class="alert-success">
 							<p>
 								Thanks, your message is sent successfully. We will contact you shortly!
