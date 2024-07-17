@@ -82,7 +82,15 @@
 				<div class="content">
 					<div class="single-post-text">
 						<p>
-							In this project I will apply machine learning techniques to analyze a dataset of 77 types of cereals using statistical methods and tools from the R programming language. The most notable of findings are:
+							In this project I applied machine learning techniques to analyze a dataset of 77 types of cereals using statistical methods and tools from the R programming language. R is popular among data scientists for its powerful tools to analyze data, create visualizations, and perform machine learning.<br><br>Asking the right questions is essential for effective data analysis because it directs what data to collect, how to analyze it, and how to interpret results. This focus leads to meaningful insights and better decision-making. Using this dataset, I aimed to answer the following questions:<br>
+							<ul>
+                                <li>Is there a relation between sugars, calories, carbs, and fat?</li>
+                                <li>Which manufacturers produce cereal with the highest calories?</li>
+                                <li>How does rating compare to calorie count?</li>
+                                <li>Which nutrients are essential for a good rating for a cereal?</li>
+								<li>Expensive cereals are generally placed toward the middle of the aisle (where one's eyes naturally go).</li>
+                            </ul>
+							My key findings were:
                             <ul>
                                 <li>Healthier cereals are generally disposed to receiving better ratings from consumers.</li>
                                 <li>The manufacturer Kellogg's was found to have the most cereals above the median calorie count.</li>
@@ -90,7 +98,11 @@
                                 <li>The addition of whole grains has the largest positive impact on ratings, followed by nuts and seeds, then dried fruits. </li>
 								<li>Expensive cereals are generally placed toward the middle of the aisle (where one's eyes naturally go).</li>
                             </ul><br><br>
-                            By using the linear regression modeling capabilities of R, it is possible to predict the rating a cereal will get based on nutritional factors, with little error. It would be very useful for manufacturers to be able to receive higher ratings on their cereals while at the same time offering healthier options for consumers.
+							One of R's powerful tools is linear regression, which helps find a line that best fits data points, showing the relationship between two variables. For instance, this is a linear regression model's output.</p>
+							<p style="text-align: center;"><img src="/images/blog/cereals_1.png" width="50%" height="50%"></p>
+							<p>The red line is a line of best fit, It is the straight line that best approximates the data points on a scatter plot<br><p style="font-size:18px; text-align: center;">76.73 - 1.15 * SUGARS - 0.35 * CALORIES + 4.62 * PROTEIN</p><p>With this equation, we can accurately predict the consumer rating of a cereal based solely on its nutritional values.
+								
+								By using the linear regression modeling capabilities of R, it is possible to predict the rating a cereal will get based on nutritional factors, with little error. It would be very useful for manufacturers to be able to receive higher ratings on their cereals while at the same time offering healthier options for consumers.
 						
 						</p><p>The raw data can be divided into two groups:
 						<table border="1" style="width: 100%; text-align: center;" id="cereal_table">
