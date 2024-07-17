@@ -1,28 +1,3 @@
-/**
-* Glitche - CV/Resume/Portfolio Template (HTML)
-* Version: 1.3
-* Author: beshleyua
-* Author URL: http://themeforest.net/user/beshleyua
-* Copyright © Cvio by beshleyua. All Rights Reserved.
-**/
-
-/* TABLE OF CONTENTS
-	1. Header
-	2. Section
-	3. Started
-	4. About
-	5. Resume
-	6. Skills
-	7. Service
-	8. Portfolio
-	9. Box Items
-	10. Contacts
-	11. Blog
-	12. Footer
-	13. Popups
-*/
-
-/* 1. Header */
 header {
   position: fixed;
   left: 0;
@@ -187,7 +162,6 @@ header .head-top .top-menu ul li.active .btn {
   border: 1px solid #f26b38;
 }
 
-/* 2. Section */
 .section {
   position: relative;
   padding: 0 80px 150px 80px;
@@ -236,7 +210,7 @@ header .head-top .top-menu ul li.active .btn {
   text-align: center;
   position: relative;
   line-height: 18px;
-  font-size: 13px;
+  font-size: 14px;
   color: #141414;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -250,7 +224,6 @@ header .head-top .top-menu ul li.active .btn {
   -khtml-box-shadow: inset 0 -6px 0px #ede574;
 }
 
-/* 3. Started */
 .section.started {
   text-align: center;
   padding: 0;
@@ -315,12 +288,12 @@ header .head-top .top-menu ul li.active .btn {
 }
 
 .section.started .started-content .h-subtitle {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .section.started .started-content .typed-subtitle,
 .section.started .started-content .typed-bread {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .section.started .mouse_btn {
@@ -341,7 +314,6 @@ header .head-top .top-menu ul li.active .btn {
   animation: mouse-anim 1s ease-out 0s infinite;
 }
 
-/* 4. About */
 @media (max-width: 400px) {
   .section.about {
     text-align: center;
@@ -439,7 +411,6 @@ header .head-top .top-menu ul li.active .btn {
   color: #f26b38;
 }
 
-/* 5. Resume */
 @media (max-width: 840px) {
   .section.resume .cols .col.col-md:first-child {
     margin-bottom: 120px;
@@ -516,7 +487,6 @@ header .head-top .top-menu ul li.active .btn {
   margin: 0;
 }
 
-/* 6. Skills */
 .skills ul {
   margin: 0;
   padding: 0;
@@ -569,7 +539,6 @@ header .head-top .top-menu ul li.active .btn {
   padding-bottom: 0;
 }
 
-/* 7. Service */
 @media (max-width: 400px) {
   .section.service {
     text-align: center;
@@ -653,7 +622,6 @@ header .head-top .top-menu ul li.active .btn {
   margin-bottom: 0;
 }
 
-/* 8. Portfolio */
 .section.works .filters {
   margin-bottom: 30px;
 }
@@ -691,7 +659,6 @@ header .head-top .top-menu ul li.active .btn {
 
 }
 
-/* 9. Box Items */
 .box-items {
   position: relative;
   overflow: hidden;
@@ -841,7 +808,6 @@ header .head-top .top-menu ul li.active .btn {
   -khtml-box-shadow: inset 0 -6px 0px #ede574;
 }
 
-/* 10. Contacts */
 @media (max-width: 400px) {
   .section.contacts {
     text-align: center;
@@ -866,7 +832,6 @@ header .head-top .top-menu ul li.active .btn {
   font-size: 15px;
 }
 
-/* 11. Blog */
 .single-post-text img {
   max-width: 100%;
 }
@@ -917,7 +882,6 @@ header .head-top .top-menu ul li.active .btn {
   margin: 30px 0 15px 0;
 }
 
-/* 12. Footer */
 footer {
   position: fixed;
   bottom: 25px;
@@ -990,7 +954,6 @@ footer .copy {
 
 }
 
-/* 13. Popups */
 .popup-box {
   margin: 30px auto;
   width: 520px;
@@ -1045,17 +1008,14 @@ footer .copy {
   -o-transition: all 0.15s ease-out;
 }
 
-/* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
   opacity: 0.8;
 }
 
-/* overlay animate out */
 .mfp-fade.mfp-bg.mfp-removing {
   opacity: 0;
 }
 
-/* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
   transition: all 0.15s ease-out;
@@ -1064,12 +1024,10 @@ footer .copy {
   -o-transition: all 0.15s ease-out;
 }
 
-/* content animate it */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
   opacity: 1;
 }
 
-/* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
@@ -1085,12 +1043,6 @@ footer .copy {
   font-size: 24px;
   font-family: 'Verdana' !important;
 }
-
-
-
-/*
-  New Styles
-*/
 
 .box-items .box-item .image .info .ion {
   font-size: 28px;
@@ -1117,7 +1069,6 @@ a.btn, .btn {
   -o-transition: background 0.3s ease 0s;
 }
 
-/* 6. Skills */
 .skills ul {
   margin: 0;
   padding: 0;

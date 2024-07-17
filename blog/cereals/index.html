@@ -5,7 +5,7 @@
 
 	<!-- Basic -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>osTicket - Gabriel Jones</title>
+	<title>Cereal Data Analysis - Gabriel Jones</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -82,50 +82,69 @@
 				<div class="content">
 					<div class="single-post-text">
 						<p>
-							Ever since I joined the MGRL in 2019, I've wanted to improve our ticketing system. Google
-							Forms lacked essential features like direct responses, agent correspondence, notifications,
-							file uploads, and ticket status tracking. Our department wasted time discussing ticket
-							details before solving them.<br><br>
-
-							I found many cloud options, but they weren't free. My boss offered an unused server, so I
-							chose osTicket, a robust open-source platform that is highly customizable and had all the
-							essential features I was looking for. I installed it on an Ubuntu Server.
-						</p><br>
-						<p><img src="/images/blog/osticket_preview.png" alt="" /></p>
-						<table style="margin-top: 10px;">
-							<thead>
-								<tr>
-									<th style="width: 150px; text-align: center;"><b>Program Name</b></th>
-									<th><b>Purpose</b></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="text-align: center;">osTicket</td>
-									<td>Manages all web pages and functions for the ticketing system.</td>
-								</tr>
-								<tr>
-									<td style="text-align: center;">Ubuntu Linux 20.04 </td>
-									<td>The operating system for the server.</td>
-								</tr>
-								<tr>
-									<td style="text-align: center;">Apache2</td>
-									<td>Makes the server accessible online via ports 80 (HTTP) and 443 (HTTPS).</td>
-								</tr>
-								<tr>
-									<td style="text-align: center;">MySQL Server</td>
-									<td>Stores all data like tickets, users, and configurations in a database.</td>
-								</tr>
-								<tr>
-									<td style="text-align: center;">PHP 7.2</td>
-									<td>Enables the server to run scripts and communicate with the database.</td>
-								</tr>
-								<tr>
-									<td style="text-align: center;">Certbot</td>
-									<td>Automates the renewal of SSL certificates for HTTPS.</td>
-								</tr>
-							</tbody>
-						</table>
+							In this project I will apply machine learning techniques to analyze a dataset of 77 types of cereals using statistical methods and tools from the R programming language. The most notable of findings are:
+                            <ul>
+                                <li>Healthier cereals are generally disposed to receiving better ratings from consumers.</li>
+                                <li>The manufacturer Kellogg's was found to have the most cereals above the median calorie count.</li>
+                                <li>Sometimes, the perception of healthiness (e.g., 'organic' or 'natural' labels) can influence ratings more than actual nutritional value.</li>
+                                <li>The addition of whole grains has the largest positive impact on ratings, followed by nuts and seeds, then dried fruits. </li>
+								<li>Expensive cereals are generally placed toward the middle of the aisle (where one's eyes naturally go).</li>
+                            </ul><br><br>
+                            By using the linear regression modeling capabilities of R, it is possible to predict the rating a cereal will get based on nutritional factors, with little error. It would be very useful for manufacturers to be able to receive higher ratings on their cereals while at the same time offering healthier options for consumers.
+						
+						</p><p>The raw data can be divided into two groups:
+						<table border="1" style="width: 100%; text-align: center;" id="cereal_table">
+							<tr>
+							  <th style="text-align: center;">QUANTITATIVE DATA</th>
+							  <th style="text-align: center;">NOMINAL DATA</th>
+							</tr>
+							<tr>
+							  <td style="text-align: center;">Name</td>
+							  <td style="text-align: center;">Calories</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;">Manufacturer</td>
+							  <td style="text-align: center;">Protein</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;">Type</td>
+							  <td style="text-align: center;">Fat</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;">Sodium</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;">Fiber</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;">Carbohydrates</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;">Sugars</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;">Potassium</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;">Vitamins</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;">Shelf</td>
+							</tr>
+							<tr>
+							  <td style="text-align: center;"></td>
+							  <td style="text-align: center;"><strong>Rating*</strong></td>
+							</tr>
+						  </table>
+						  
+						  </p>
 						<p>
 							I began by installing Ubuntu Server and configuring Apache2. Once configured, I was able to
 							access the webserver locally via "localhost." To gain external access, I needed our ISP to

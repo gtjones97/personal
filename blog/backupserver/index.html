@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	
+
 	<!-- Basic -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Backup Server - Gabriel Jones</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	
+
 	<!-- Load Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic' rel='stylesheet'>
-	
+	<link
+		href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,300italic,300,100italic,400italic,500,500italic,700,700italic&amp;subset=latin,cyrillic'
+		rel='stylesheet'>
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="/css/alani-basic.css" />
 	<link rel="stylesheet" href="/css/alani-layout.css" />
@@ -19,29 +22,31 @@
 	<link rel="stylesheet" href="/css/magnific-popup.css" />
 	<link rel="stylesheet" href="/css/animate.css" />
 	<link rel="stylesheet" href="/css/colors.css" />
-	
+
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="/images/favicons/favicon.ico">
 
 </head>
 
-<body>	
-	
+<body>
+
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="centrize full-width">
 			<div class="vertical-center">
 				<div class="pre-inner">
-					<div class="load typing-load"><p>loading...</p></div>
+					<div class="load typing-load">
+						<p>loading...</p>
+					</div>
 					<span class="typed-load"></span>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Container -->
 	<div class="container">
-		
+
 		<!-- Header -->
 		<header>
 			<div class="head-top">
@@ -55,10 +60,10 @@
 				</div>
 			</div>
 		</header>
-		
+
 		<!-- Wrapper -->
 		<div class="wrapper">
-		
+
 			<!-- Started -->
 			<div class="section started">
 				<div class="centrize full-width">
@@ -71,63 +76,83 @@
 				</div>
 				<a href="blog_inner.html#" class="mouse_btn"><span class="ion ion-mouse"></span></a>
 			</div>
-			
+
 			<!-- Blog -->
 			<div class="section blog">
 				<div class="content">
 					<div class="single-post-text">
 						<p>
-							
-The goal was to create a secure, hidden network file share for automated scheduled backups, eliminating the need for manual PC backups with external hard drives. This upgrade would significantly reduce time and stress for the IT department.<br><br>
-After doing some research, I began this project by setting up an unused server machine that was purchased by a past
-administration. This machine came preloaded with Windows Server, so I set up an
-Administrator account with the password [redacted] and ran all the available updates for
-the system. Then, under server roles, I added “File and Storage Services” which provided me
-with the appropriate tools to create a network share. You can add the role via the Server
-Manager or by using the following powershell command: Install-WindowsFeature
--Name FS-FileServer -IncludeAllSubFeature -IncludeManagementTools. <br><br>I installed a new 4TB NAS hard drive, activated it in BIOS, and cleaned it in Windows. I then created a new NTFS volume, named it "Backups Primary," and assigned it the drive letter B:. With the backup location set, I made it accessible on the network using the New Share Wizard under File and Storage Services. I created and selected the directory B:\Shares\Backups to be shared. To access this drive over the network, Administrator's credentials are required. I also enabled “Access-based enumeration” to hide the directory from unauthorized users. After completing the wizard, we are finally ready to start creating backups. You can test if the
-drive is available over the network by going to any other network-connected PC and directing
-File Explorer to the share: \\$ServerName\Backups and you should be prompted to
-enter the Admin credentials.<br><br>To automate the backup process, I used <a style="text-decoration: underline;" href="https://www.veeam.com/products/free/microsoft-windows.html">Veeam Agent for Windows Community Edition</a>. This free program, which allows one backup job per client PC, is suitable for our needs. I installed the program on each client PC. Then, right-click the system tray icon, and select Configure Backup.
 
-Name the job and choose File level backup. Select the directories to sync, starting with "Personal files." Set the destination to our shared folder using the server Administrator’s credentials. Encrypt each backup job by clicking Advanced and setting a password ([redacted]). Schedule the backup and apply the settings.
+							The goal was to create a secure, hidden network file share for automated scheduled backups,
+							eliminating the need for manual PC backups with external hard drives. This upgrade would
+							significantly reduce time and stress for the IT department.<br><br>
+							After doing some research, I began this project by setting up an unused server machine that
+							was purchased by a past
+							administration. This machine came preloaded with Windows Server, so I set up an
+							Administrator account with the password [redacted] and ran all the available updates for
+							the system. Then, under server roles, I added “File and Storage Services” which provided me
+							with the appropriate tools to create a network share. You can add the role via the Server
+							Manager or by using the following powershell command: Install-WindowsFeature
+							-Name FS-FileServer -IncludeAllSubFeature -IncludeManagementTools. <br><br>I installed a new
+							4TB NAS hard drive, activated it in BIOS, and cleaned it in Windows. I then created a new
+							NTFS volume, named it "Backups Primary," and assigned it the drive letter B:. With the
+							backup location set, I made it accessible on the network using the New Share Wizard under
+							File and Storage Services. I created and selected the directory B:\Shares\Backups to be
+							shared. To access this drive over the network, Administrator's credentials are required. I
+							also enabled “Access-based enumeration” to hide the directory from unauthorized users. After
+							completing the wizard, we are finally ready to start creating backups. You can test if the
+							drive is available over the network by going to any other network-connected PC and directing
+							File Explorer to the share: \\$ServerName\Backups and you should be prompted to
+							enter the Admin credentials.<br><br>To automate the backup process, I used <a
+								style="text-decoration: underline;"
+								href="https://www.veeam.com/products/free/microsoft-windows.html">Veeam Agent for
+								Windows Community Edition</a>. This free program, which allows one backup job per client
+							PC, is suitable for our needs. I installed the program on each client PC. Then, right-click
+							the system tray icon, and select Configure Backup.
 
-If the installation is successful, the agents will save backup files to the network drive. To restore, perform a one-time restore via the agent or open a backup file on the server using Veeam Backup and Restore Community Edition. At this point the job is complete!
-			
-						</p>  <br>           
-                        <p style="text-align: center;"><img src="/images/backupserver/veeam_animation.gif" alt="" /></p>
+							Name the job and choose File level backup. Select the directories to sync, starting with
+							"Personal files." Set the destination to our shared folder using the server Administrator’s
+							credentials. Encrypt each backup job by clicking Advanced and setting a password
+							([redacted]). Schedule the backup and apply the settings.
+
+							If the installation is successful, the agents will save backup files to the network drive.
+							To restore, perform a one-time restore via the agent or open a backup file on the server
+							using Veeam Backup and Restore Community Edition. At this point the job is complete!
+
+						</p> <br>
+						<p style="text-align: center;"><img src="/images/backupserver/veeam_animation.gif" alt="" /></p>
 					</div>
 					<div class="clear"></div>
 				</div>
 			</div>
-		
+
 		</div>
-		
+
 		<!-- Footer -->
 		<footer>
 			<div class="copy">© 2024 Gabriel Jones</div>
 			<div class="clr"></div>
 		</footer>
-		
+
 		<!-- Lines -->
 		<div class="line top"></div>
 		<div class="line bottom"></div>
 		<div class="line left"></div>
 		<div class="line right"></div>
-		
+
 	</div>
-	
+
 	<!-- jQuery Scripts -->
-    <script src="/js/jquery.min.js"></script>
-	<script src="/js/jquery.validate.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	<script src="/js/typed.js"></script>
 	<script src="/js/magnific-popup.js"></script>
 	<script src="/js/imagesloaded.pkgd.js"></script>
 	<script src="/js/isotope.pkgd.js"></script>
-	
+
 	<!-- Main Scripts -->
 	<script src="/js/alani-scripts.js"></script>
 
-	
+
 </body>
+
 </html>
